@@ -1,16 +1,15 @@
 using UnityEngine;
 using TMPro;
 
-public class WeaponView : MonoBehaviour
+public class WeaponView : MonoBehaviour, IWeaponView
 {
     [SerializeField] TextMeshProUGUI textBullets;
     [SerializeField] BulletCirlce bulletCirlceExample;
     [SerializeField] Transform placeWhereBulletOut;
-    public delegate void FirePressed();
-    FirePressed firePressed;
+    IWeaponView.FirePressed firePressed;
     private const int spacing = 2;
 
-    public void RegDelegate(FirePressed firePressed)
+    public void RegDelegate(IWeaponView.FirePressed firePressed)
     {
         this.firePressed = firePressed;
     }

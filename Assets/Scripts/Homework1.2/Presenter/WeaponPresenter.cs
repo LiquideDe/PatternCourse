@@ -1,9 +1,9 @@
 public class WeaponPresenter
 {
     private WeaponModel weaponModel;
-    private WeaponView weaponView;
+    private IWeaponView weaponView;
 
-    public WeaponPresenter(WeaponModel weaponModel, WeaponView weaponView)
+    public WeaponPresenter(WeaponModel weaponModel, IWeaponView weaponView)
     {
         this.weaponModel = weaponModel;
         this.weaponView = weaponView;
