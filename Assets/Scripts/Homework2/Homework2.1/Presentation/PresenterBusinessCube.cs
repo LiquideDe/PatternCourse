@@ -43,6 +43,9 @@ public class PresenterBusinessCube : IPresenter
 
     public void StateWasChanged()
     {
+        Debug.Log($"Проверка в начале");
+        Debug.Log($"Выведем координаты {_pointsOfInterest.WorkCoordinates}");
+
         PointsOfInterestForBusinessCube.NamesOfPoint pointNameAtState = _businessCube.GetNameOfPoint();
         
         if (pointNameAtState == PointsOfInterestForBusinessCube.NamesOfPoint.None)
@@ -55,9 +58,10 @@ public class PresenterBusinessCube : IPresenter
         }
         else if (pointNameAtState == PointsOfInterestForBusinessCube.NamesOfPoint.Work)
         {
+            //_viewCubeMovement.SetNewStrategy(new MoveToAnywhere(_coordinatesWork, _viewCubeMovement.Transform, _businessCube.Speed));
             SetParametersMoveStrategy(_businessCube.Speed, _coordinatesWork);
         }
-
+        Debug.Log($"Проверка в конце");
     }
 
     private void SetParametersMoveStrategy(float speed, Vector3 coordinateDestination)

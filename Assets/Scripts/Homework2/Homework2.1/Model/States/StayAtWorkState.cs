@@ -14,7 +14,7 @@ public class StayAtWorkState : MovementOrNotState
         Debug.Log($"Работаем");
         //Устали, отнимает четверть от скорости
         _businessCube.Speed = MinusQuarterOfNumber(BusinessCube.MaxSpeed);
-        var t1 = new System.Threading.Timer(TimeIsPassed, null, TimeSpan.FromSeconds(3), TimeSpan.Zero);
+        var timer = new System.Threading.Timer(TimeIsPassed, null, TimeSpan.FromSeconds(3), TimeSpan.Zero);
     }
 
     public override void Exit()

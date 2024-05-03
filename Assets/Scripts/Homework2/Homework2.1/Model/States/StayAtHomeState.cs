@@ -13,7 +13,7 @@ public class StayAtHomeState : MovementOrNotState
         base.Enter();
         Debug.Log($"Можно и отдохнуть");
         _businessCube.Speed = BusinessCube.MaxSpeed;
-        var t1 = new System.Threading.Timer(TimeIsPassed, null, TimeSpan.FromSeconds(2), TimeSpan.Zero);
+        var timer = new System.Threading.Timer(TimeIsPassed, null, TimeSpan.FromSeconds(2), TimeSpan.Zero);
     }
 
     public override void Exit()
