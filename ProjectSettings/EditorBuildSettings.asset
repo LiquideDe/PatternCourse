@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Homework4/4.3/SceneChooseLvl.unity
+    guid: f47870416d9a5d14dbfe2e4057856ea5
+  - enabled: 1
+    path: Assets/Scenes/Homework4/4.3/SceneGamePlay.unity
+    guid: ee1714423f1e8c04e9358705b0216af0
   m_configObjects: {}
